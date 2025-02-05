@@ -1,0 +1,180 @@
+body {
+    width: 350px;
+    margin: 0;
+    padding: 15px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: #212529;
+}
+
+.container {
+    position: relative;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #ff0000;
+    letter-spacing: -0.5px;
+}
+
+.tagline {
+    margin: 0.25rem 0 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.loader-container {
+    display: none;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #ff0000;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+    margin: 0;
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+.summary-container {
+    display: none;
+}
+
+.video-title {
+    font-size: 1.1rem;
+    margin: 0 0 1rem;
+    color: #212529;
+    line-height: 1.4;
+}
+
+.summary-content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.summary-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.summary-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.summary-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.summary-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid #dee2e6;
+    padding-top: 1rem;
+}
+
+.copy-button {
+    background: #ff0000;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.copy-button:hover {
+    background: #cc0000;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.copy-confirmation {
+    color: #28a745;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.error-container {
+    display: none;
+    background: #ffe3e3;
+    color: #dc3545;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Previous styles remain the same, add these new styles */
+
+.button-container {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.summarize-button {
+    background: #ff0000;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+}
+
+.summarize-button:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.25);
+}
+
+.summarize-button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(255, 0, 0, 0.2);
+}
+
+/* Update initial display states */
+.button-container { display: block; }
+.loader-container { display: none; }
+.summary-container { display: none; }
+.error-container { display: none; }

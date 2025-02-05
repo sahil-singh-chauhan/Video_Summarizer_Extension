@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Summarizer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <!-- You can replace the src with your own logo -->
+      <img src="images/abc.jpg" alt="Logo" class="logo">
+      <h1>YouTube Summarizer</h1>
+      <p class="tagline">Quick summary of YouTube videos</p>
+    </header>
+    
+    <!-- Button Container -->
+    <div class="button-container">
+      <button class="summarize-button" id="summarizeButton">Summarize</button>
+    </div>
+    
+    <!-- Loader Container -->
+    <div class="loader-container" id="loaderContainer">
+      <div class="loader"></div>
+      <p class="loading-text">Fetching summary...</p>
+    </div>
+    
+    <!-- Summary Container -->
+    <div class="summary-container" id="summaryContainer">
+      <p class="video-title" id="videoTitle"></p>
+      <div class="summary-content" id="summaryContent"></div>
+      <div class="summary-actions">
+        <button class="copy-button" id="copyButton">Copy</button>
+        <span class="copy-confirmation" id="copyConfirmation">Copied!</span>
+      </div>
+    </div>
+    
+    <!-- Error Container -->
+    <div class="error-container" id="errorContainer">
+      <p id="errorMessage"></p>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
